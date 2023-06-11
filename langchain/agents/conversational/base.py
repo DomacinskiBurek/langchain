@@ -22,6 +22,7 @@ class ConversationalAgent(Agent):
 
     ai_prefix: str = "AI"
     output_parser: AgentOutputParser = Field(default_factory=ConvoOutputParser)
+    used_tools: list[str] = []
 
     @classmethod
     def _get_default_output_parser(
@@ -76,6 +77,7 @@ class ConversationalAgent(Agent):
         format_instructions = format_instructions.format(
             tool_names=tool_names, ai_prefix=ai_prefix, human_prefix=human_prefix
         )
+
         template = "\n\n".join([prefix, tool_strings, format_instructions, suffix])
         if input_variables is None:
             input_variables = ["input", "chat_history", "agent_scratchpad"]
