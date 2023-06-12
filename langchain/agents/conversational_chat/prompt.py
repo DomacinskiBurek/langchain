@@ -27,13 +27,13 @@ Markdown code snippet formatted in the following schema:
 
 ```json
 {{{{
-    "action": "Question to Human,
+    "action": "Question to Human",
     "action_input": string \\ The counter question
 }}}}
 ```
 
 **Option #3:**
-Use this if you want to respond directly to the human. 
+Use this if you want to respond directly to the human or you already have good enough answer to the question.
 Markdown code snippet formatted in the following schema:
 
 ```json
