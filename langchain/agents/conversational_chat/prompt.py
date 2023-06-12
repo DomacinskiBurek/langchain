@@ -7,21 +7,8 @@ provide wide range of answers, and it is constantly improving based on users int
 FORMAT_INSTRUCTIONS = """RESPONSE FORMAT INSTRUCTIONS
 ----------------------------
 
-When responding to me, first use important condition to see if you can reply directory or not and then please output a response in one of two formats:
+When responding to me, please output a response in one of three formats:
 
-**Important conditions**
-```text plain
-Is input small talk or conversation about unimportant or uncontroversial topics?: [yes or no]
-    - if yes, answer immediately using Option 2 format
-    
-Is input too broad and requires a lot of information?: [yes or no]
-    - if yes, try to create more specific and clear question to use with Option 1 format
-        - if you can't create more specific and clear question use Option 2 format to reply!
-    
-Is impossible to answer?: [yes or no]
-    - if yes create question for user to return with Option 2 format
-
-```
 
 **Option 1:**
 Use this if you want the human to use a tool.
@@ -34,8 +21,20 @@ Markdown code snippet formatted in the following schema:
 }}}}
 ```
 
-**Option #2:**
-Use this if you want to respond directly to the human. Markdown code snippet formatted in the following schema:
+**Option 2:**
+Use this if you want to ask human something.
+Markdown code snippet formatted in the following schema:
+
+```json
+{{{{
+    "action": "Question to Human,
+    "action_input": string \\ The counter question
+}}}}
+```
+
+**Option #3:**
+Use this if you want to respond directly to the human. 
+Markdown code snippet formatted in the following schema:
 
 ```json
 {{{{
