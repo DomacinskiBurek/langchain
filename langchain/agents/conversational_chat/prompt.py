@@ -23,6 +23,7 @@ Markdown code snippet formatted in the following schema:
 
 **Option 2:**
 Use this if you want to ask human something.
+If question is not logic or question doesn't make any sense, then you can create your own question to ask human about the input.
 Markdown code snippet formatted in the following schema:
 
 ```json
@@ -34,6 +35,7 @@ Markdown code snippet formatted in the following schema:
 
 **Option #3:**
 Use this if you want to respond directly to the human or you already have fine enough answer to the question.
+If question is small talk, then response with a small talk answer as (Final Answer).
 Markdown code snippet formatted in the following schema:
 
 ```json
