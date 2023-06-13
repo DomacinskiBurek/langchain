@@ -53,7 +53,14 @@ Assistant can ask the user to use tools to look up information that may be helpf
 
 USER'S INPUT
 --------------------
-Does question have any relationship with questions and answers in memory?
+```plain
+Is there a connection between this input and the previous inputs from a conversation history?
+Is the input about a noun or a pronoun from a conversation history?
+Does the input have anything to do with the previous inputs from a conversation history?
+```
+if negative, treat question as a completely new question.
+
+
 Here is the user's input (remember to respond with a markdown code snippet of a json blob with a single action, and NOTHING else):
 
 {{{{input}}}}"""
