@@ -54,6 +54,7 @@ Assistant can ask the user to use tools to look up information that may be helpf
 USER'S INPUT
 --------------------
 ```plain
+Does the new question have a complete definition and meaning to which it refers?
 Is there a connection between this input and the previous inputs from a conversation history?
 Is the input about a noun or a pronoun from a conversation history?
 Does the input have anything to do with the previous inputs from a conversation history?
