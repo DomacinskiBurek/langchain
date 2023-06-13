@@ -137,5 +137,5 @@ class ConversationalChatAgent(Agent):
             llm_chain=llm_chain,
             allowed_tools=tool_names,
             output_parser=_output_parser,
-            **kwargs,
+            **kwargs
         )

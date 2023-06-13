@@ -16,7 +16,7 @@ Markdown code snippet formatted in the following schema:
 
 ```json
 {{{{
-    "action": string, \\ The action to take. Must be one of {tool_names} . Do not use same tool many times.
+    "action": string, \\ The action to take. Must be one of {tool_names} . Do not use same tool more than three times.
     "action_input": string \\ The input to the action
 }}}}
 ```
@@ -33,8 +33,7 @@ Markdown code snippet formatted in the following schema:
 ```
 
 **Option #3:**
-Use this if you want to respond directly to the human or you already have good enough answer to the question or If question is small talk.
-
+Use this if you want to respond directly to the human or you already have fine enough answer to the question.
 Markdown code snippet formatted in the following schema:
 
 ```json
@@ -54,6 +53,7 @@ Assistant can ask the user to use tools to look up information that may be helpf
 
 USER'S INPUT
 --------------------
+Does question have any relationship with questions and answers in memory?
 Here is the user's input (remember to respond with a markdown code snippet of a json blob with a single action, and NOTHING else):
 
 {{{{input}}}}"""
