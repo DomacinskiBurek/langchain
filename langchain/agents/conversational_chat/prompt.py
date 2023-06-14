@@ -34,6 +34,8 @@ Markdown code snippet formatted in the following schema:
 
 **Option #3:**
 Use this if you want to respond directly to the human or you already have fine enough answer to the question.
+Before you return response, make sure that every query result from question is in an answer!
+
 Markdown code snippet formatted in the following schema:
 
 ```json
