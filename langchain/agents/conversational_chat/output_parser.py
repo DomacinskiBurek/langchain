@@ -16,7 +16,7 @@ class ConvoOutputParser(AgentOutputParser):
         try:
             response = parse_json_markdown(text)
             action, action_input = response["action"], response["action_input"]
-            if action == "Final Answer" or action == "Question to Human":
+            if action == "Final Answer" or action == "Question to User":
                 return AgentFinish({"output": action_input}, text)
             else:
                 return AgentAction(action, action_input, text)
