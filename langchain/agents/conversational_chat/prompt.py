@@ -9,8 +9,9 @@ FORMAT_INSTRUCTIONS = """RESPONSE FORMAT INSTRUCTIONS
 
 When responding to me, please output a response in one of three formats:
 
+
 **Option #1:**
-Use this if you need to use tool to find an answer to the user's question. 
+Use this if you need to use a tool to find an answer to the user's question.
 Markdown code snippet formatted in the following schema:
 
 ```json
@@ -18,6 +19,7 @@ Markdown code snippet formatted in the following schema:
     "action": string, \\ The action to take. Must be one of {tool_names}.
     "action_input": string \\ This must be a question for tool.
 }}}}```
+
 
 **Option #2:**
 Use this to ask the user a clarification question if the question is not a follow-up question, clarification or specification and if the user's question is not clear enough or you need more information to provide an answer.
@@ -30,14 +32,15 @@ Markdown code snippet formatted in the following schema:
     "action_input": string \\ You should put a real question to the user not statement
 }}}}```
 
+
 **Option #3**
-Use this if you have a direct response or a good enough answer to the user's question.
+Use this if user's question is small talk and if you have a direct response or a good enough answer to the user's question.
 Markdown code snippet formatted in the following schema:
 
 ```json
 {{{{
     "action": "Final Answer", 
-    "action_input": string \\ You should put what you want to return to use here
+    "action_input": string \\ You should put what you want to return
 }}}}```
 
 """
@@ -69,7 +72,9 @@ serves as a follow-up question, clarification, or specification.
 
 It is very important to answer every question whether it is related to the topic or not!
 Do not forget to follow given rules!
-Here is the user's question (REMEMBER to respond with a markdown code snippet of a json blob with a single action, make sure you parse json blob correctly, and NOTHING else):
+
+IMPORTANT: make sure while responding to respond with a markdown code snippet of a json blob with a single action, markdown code snippet must be correct snippet as it's provided and NOTHING else!
+Here is the user's input:
 
 {{{{input}}}}"""
 
@@ -82,4 +87,6 @@ Use provided observation to answer user's question:
 USER'S INPUT
 --------------------
 
-Okay, so what is the response to my last comment? If using information obtained from the tools you must mention it explicitly without mentioning the tool names - I have forgotten all TOOL RESPONSES! Remember to respond with a markdown code snippet of a json blob with a single action, make sure you parse json blob correctly, and NOTHING else."""
+
+IMPORTANT: make sure while responding to respond with a markdown code snippet of a json blob with a single action, markdown code snippet must be correct snippet as it's provided and NOTHING else!
+Okay, so what is the response to my last comment? If using information obtained from the tools you must mention it explicitly without mentioning the tool names - I have forgotten all TOOL RESPONSES!"""
