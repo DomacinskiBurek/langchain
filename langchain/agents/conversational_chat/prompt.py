@@ -69,7 +69,7 @@ A: ?
 Consider the conversation history provided below and determine whether the user's question 
 serves as a follow-up question, clarification, or specification. 
 
-
+It is very important to answer every question whether it is related to the topic or not!
 Here is the user's question (REMEMBER to respond 
 with a markdown code snippet of a json blob with a single action, and NOTHING else):
 
