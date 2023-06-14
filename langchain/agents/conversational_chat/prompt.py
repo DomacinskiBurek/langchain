@@ -11,7 +11,6 @@ When responding to me, please output a response in one of three formats:
 
 **Option #1:**
 Use this if you need to use tool to find an answer to the user's question. 
-
 Markdown code snippet formatted in the following schema:
 
 ```json
@@ -23,7 +22,6 @@ Markdown code snippet formatted in the following schema:
 **Option #2:**
 Use this to ask the user a clarification question if the question is not a follow-up question, clarification or specification and if the user's question is not clear enough or you need more information to provide an answer.
 Do not use if you have good enough answer on the user's question.
-
 Markdown code snippet formatted in the following schema:
 
 ```json
@@ -39,7 +37,7 @@ Markdown code snippet formatted in the following schema:
 ```json
 {{{{
     "action": "Final Answer", 
-    "action_input": string, \\ You should put what you want to return to use here
+    "action_input": string \\ You should put what you want to return to use here
 }}}}```
 
 """
@@ -70,8 +68,8 @@ Consider the conversation history provided below and determine whether the user'
 serves as a follow-up question, clarification, or specification. 
 
 It is very important to answer every question whether it is related to the topic or not!
-Here is the user's question (REMEMBER to respond 
-with a markdown code snippet of a json blob with a single action, and NOTHING else):
+Do not forget to follow given rules!
+Here is the user's question (REMEMBER to respond with a markdown code snippet of a json blob with a single action, make sure you parse json blob correctly, and NOTHING else):
 
 {{{{input}}}}"""
 
@@ -84,4 +82,4 @@ Use provided observation to answer user's question:
 USER'S INPUT
 --------------------
 
-Okay, so what is the response to my last comment? If using information obtained from the tools you must mention it explicitly without mentioning the tool names - I have forgotten all TOOL RESPONSES! Remember to respond with a markdown code snippet of a json blob with a single action, and NOTHING else."""
+Okay, so what is the response to my last comment? If using information obtained from the tools you must mention it explicitly without mentioning the tool names - I have forgotten all TOOL RESPONSES! Remember to respond with a markdown code snippet of a json blob with a single action, make sure you parse json blob correctly, and NOTHING else."""
