@@ -34,7 +34,7 @@ Markdown code snippet formatted in the following schema:
 
 
 **Option #3**
-Use this if user's question is small talk and if you have a direct response or a good enough answer to the user's question.
+Use this if user's question is small talk (an informal type of discourse that does not cover any functional topics of conversation or any transactions that need to be addressed) or if you have a direct response or a good enough answer to the user's question.
 Markdown code snippet formatted in the following schema:
 
 ```json
