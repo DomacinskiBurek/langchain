@@ -34,9 +34,9 @@ Use this if you want to respond directly to the human. Markdown code snippet for
 
 SUFFIX = """TOOLS
 ------
-Assistant can use tools to look up information that may be helpful in answering the users original question.
-When the answer is not precise, good enough or does not give an adequate answer at all, consider using other tools even though they may not be intended for the area in question.
-While using tools, do not provide same question to the tool.
+
+When answering a question, use the tool that you think is most appropriate for the given question. When the answer is not precise enough or not good enough or does not give an adequate answer in the end, consider using other tools that are available even though they may not be suitable for the given question.
+Remember when using the tool, the content of the action_input property of the tool must not be the answer to the question, it can only ask the question passed to the tool.
 The tools the Assistant can use are:
 
 {{tools}}
@@ -46,6 +46,7 @@ USER'S INPUT
 
 {format_instructions} 
 
+All questions must be answered using proper tool!
 Consider the conversation history as an additional source of information to look up for information when question serves as a follow-up question, clarification, or specification. 
 It is very important to answer every question even if it isn't related to the topic!
 Do not forget to follow given rules!
