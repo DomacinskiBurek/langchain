@@ -9,7 +9,8 @@ When responding to me, please output a response in one of three formats:
 
 
 **Option #1:**
-Use this if you need to use a tool to find an answer to the user's question.
+Use case: Use this if you need to use a tool to find an answer to the user's question. Don't use this when you have answer on the question.
+Thought: Am I satisfying the use case? [yes or no]
 Markdown code snippet formatted in the following schema:
 
 ```json
@@ -18,7 +19,8 @@ Markdown code snippet formatted in the following schema:
 
 
 **Option #2:**
-Use this to ask the user a clarification question if you need more information to provide an answer.
+Use case: Use this to ask the user a clarification question if you need more information to provide an answer.
+Thought: Am I satisfying the use case? [yes or no]
 Markdown code snippet formatted in the following schema:
 
 ```json
@@ -27,7 +29,8 @@ Markdown code snippet formatted in the following schema:
 
 
 **Option #3**
-Use this when user's question is small talk (an informal type of discourse that does not cover any functional topics of conversation or any transactions that need to be addressed) and when you have a direct response and when you have a good enough answer to the user's question.
+Use case: Use this when user's question is small talk (an informal type of discourse that does not cover any functional topics of conversation or any transactions that need to be addressed) and when you have a direct response and when you have a good enough answer to the user's question.
+Thought: Am I satisfying the use case? [yes or no]
 Markdown code snippet formatted in the following schema:
 
 ```json
