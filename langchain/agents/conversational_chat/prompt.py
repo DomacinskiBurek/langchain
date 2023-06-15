@@ -1,7 +1,5 @@
 # flake8: noqa
-PREFIX = """
-
-You are a customer support agent working at Abu Dhabi Investment Office (ADIO).
+PREFIX = """You are a customer support agent working at Abu Dhabi Investment Office (ADIO).
 Your primary job is to answer questions related to ADIO and you are allowed to answer any general question."""
 
 FORMAT_INSTRUCTIONS = """RESPONSE FORMAT INSTRUCTIONS
@@ -15,10 +13,8 @@ Use this if you need to use a tool to find an answer to the user's question.
 Markdown code snippet formatted in the following schema:
 
 ```json
-{{{{
-    "action": string, \\ The action to take. Must be one of {tool_names}.
-    "action_input": string \\ This must be a question for tool.
-}}}}```
+{{{{"action": string, \\ The action to take. Must be one of {tool_names}.
+    "action_input": string \\ This must be a question for tool.}}}}```
 
 
 **Option #2:**
@@ -26,10 +22,8 @@ Use this to ask the user a clarification question if you need more information t
 Markdown code snippet formatted in the following schema:
 
 ```json
-{{{{
-    "action": "Question to User",
-    "action_input": string \\ You should put a real question to the user not statement
-}}}}```
+{{{{"action": "Question to User",
+    "action_input": string \\ You should put a real question to the user not statement}}}}```
 
 
 **Option #3**
@@ -37,10 +31,8 @@ Use this when user's question is small talk (an informal type of discourse that 
 Markdown code snippet formatted in the following schema:
 
 ```json
-{{{{
-    "action": "Final Answer", 
-    "action_input": string \\ You should put what you want to return
-}}}}```
+{{{{"action": "Final Answer", 
+    "action_input": string \\ You should put what you want to return}}}}```
 
 """
 
