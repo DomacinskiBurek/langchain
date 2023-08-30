@@ -9,6 +9,8 @@ from langchain.schema import AgentAction, AgentFinish, OutputParserException
 
 
 class ConvoOutputParser(AgentOutputParser):
+    """Output parser for the conversational agent."""
+
     def get_format_instructions(self) -> str:
         return FORMAT_INSTRUCTIONS
 
@@ -16,7 +18,7 @@ class ConvoOutputParser(AgentOutputParser):
         try:
             response = parse_json_markdown(text)
             action, action_input = response["action"], response["action_input"]
-            if action == "Final Answer" or action == "Question to User":
+            if action == "Final Answer":
                 return AgentFinish({"output": action_input}, text)
             else:
                 return AgentAction(action, action_input, text)
